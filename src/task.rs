@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize, Debug, PartialEq)]
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq)]
 pub enum TaskStatus {
     Pending,
     Running,
@@ -9,7 +9,7 @@ pub enum TaskStatus {
     Cancelled,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Task {
     pub id: String,
     pub description: String,
